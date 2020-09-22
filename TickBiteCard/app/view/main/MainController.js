@@ -13,7 +13,8 @@ Ext.define('TickBiteCard.view.main.MainController', {
         'Ext.layout.*',
         'Ext.draw.*',
         'Ext.scroll.Scroller',
-        'Ext.tip.ToolTip'
+        'Ext.tip.ToolTip',
+        'Ext.data.*'
     ],
     onMouseOver: function (item, event) {
         var sprite = item && item.sprite;
@@ -283,8 +284,8 @@ Ext.define('TickBiteCard.view.main.MainController', {
     onAfterRender: function (comp, opts) {
         console.log('onAfterRender');
 
-        Ext.data.StoreManager.lookup('Diseases').load();
-        Ext.data.StoreManager.lookup('Raion').load();
+        // Ext.data.StoreManager.lookup('Diseases').load();
+        // Ext.data.StoreManager.lookup('Raion').load();
     },
     onSeriesTooltipRender: function () { },
     onDiseasesLoad: function (store, recs, success, operation) {

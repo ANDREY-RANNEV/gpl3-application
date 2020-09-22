@@ -25,7 +25,7 @@ Ext.define('TickBiteCard.view.main.Main', {
         'TickBiteCard.view.main.MainController',
         'TickBiteCard.view.main.MainModel'
     ],
-scaleFactor : 0.65,
+
     controller: 'main',
     viewModel: 'main',
 
@@ -112,5 +112,8 @@ scaleFactor : 0.65,
             
                         ]}
             ]}
-        ]
+        ],
+        listeners: {
+    afterrender: 'onAfterRender'
+}
 });
