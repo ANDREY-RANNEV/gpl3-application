@@ -9,7 +9,9 @@ Ext.application({
     extend: 'TickBiteCard.Application',
 
     requires: [
-        'TickBiteCard.view.main.Main'
+        'TickBiteCard.view.main.Main',
+        'TickBiteCard.*','Ext.draw.*', 
+        'Ext.plugin.Viewport'
     ],
 
     // The name of the initial view to create. With the classic toolkit this class
@@ -24,3 +26,4 @@ Ext.application({
     // of merge conflicts when upgrading to new versions of Sencha Cmd.
     //-------------------------------------------------------------------------
 });
+var scaleFactor = 0.65;
