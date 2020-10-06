@@ -40,8 +40,8 @@ Ext.define('TickBiteCard.view.main.Main', {
     items: [
             {
             xtype: 'panel',
-            width: 837.64001 * 0.65 + 10,
-            height: 921.37 * 0.65 + 5,
+            width: 837.64001 * scaleFactor + 10,
+            height: 921.37 * scaleFactor + 5,
             region:'west',
             border: true,
             items: [
@@ -50,15 +50,26 @@ Ext.define('TickBiteCard.view.main.Main', {
                     name: 'SamaraMapImg',
                     layout: 'fit',
                     xtype: 'draw',
-                    width: 837.64001 * 0.65 + 5,
-                    height: 921.37 * 0.65,
+                    width: 837.64001 * scaleFactor + 5,
+                    height: 921.37 * scaleFactor,
                     engine: 'Ext.draw.engine.Svg',
                     border: false,
                     // plugins: {
                         // spriteevents: true
                     // },
 
-                    sprites: [],
+                    sprites: [
+                        {
+                            type: 'rect',
+                            x: 50,
+                            y: 50,
+                            width: 100,
+                            height: 100,
+                            lineWidth: 4,
+                            strokeStyle: 'green',
+                            fillStyle: 'yellow'
+                        }
+                    ],
 
                     listeners: {
                         spriteclick: 'onSpriteClick',
