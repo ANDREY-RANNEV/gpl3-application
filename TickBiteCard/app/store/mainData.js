@@ -21,7 +21,7 @@ Version: 6.2.0.981 Build date: 2016-08-31 14:49:44 (08dbbd0ec0b8bc0e014d725fdb7d
 */
 Ext.define('TickBiteCard.store.mainData', {
     extend: 'Ext.data.Store',
-    alias: 'store.raion',
+    alias: 'store.mainData',
     model: 'TickBiteCard.model.mainData',
     autoLoad: true,
     proxy: {

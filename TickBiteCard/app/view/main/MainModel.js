@@ -6,20 +6,25 @@ Ext.define('TickBiteCard.view.main.MainModel', {
 
     alias: 'viewmodel.main',
     requres: [
-        'Tick.bite.map.model.Raion',
-        'Tick.bite.map.model.Locality',
-        'SamaraMap.model.Base',
+        'TickBiteCard.model.Raion',
+        'TickBiteCard.model.Locality',
+        'TickBiteCard.model.diseases',
+        'TickBiteCard.model.mainData',
+        'TickBiteCard.model.Base',
         'TickBiteCard.store.Raion',
         'TickBiteCard.store.Locality',
-        'TickBiteCard.view.main.List1',
-        'TickBiteCard.view.main.List'
+        'TickBiteCard.store.diseases',
+        'TickBiteCard.store.mainData',
+        // 'TickBiteCard.view.main.List1',
+        // 'TickBiteCard.view.main.List',
+        'Ext.data.*'
     ],
     data: {
         name: 'TickBiteCard',
 
         loremIpsum: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
-stores: {
+    stores: {
         // getRaions:Ext.create('Tick.bite.map.store.Raion',{
         getRaions: {
 
@@ -66,14 +71,14 @@ stores: {
                     rootProperty: 'diseases'
                 }
             },
-            storeId: 'Diseases',
+            storeId: 'diseases',
             listeners: {
                 load: 'onDiseasesLoad'
             }
-        }, 
+        },
         getMainData: {
             model: 'TickBiteCard.model.mainData',
-            autoLoad: true,
+            autoLoad: false,
             proxy: {
                 type: 'ajax',
                 url: 'resources/Data/mainData.json',

@@ -284,13 +284,13 @@ Ext.define('TickBiteCard.view.main.MainController', {
     onAfterRender: function (comp, opts) {
         console.log('onAfterRender');
 
-        // Ext.data.StoreManager.lookup('Diseases').load();
+        // Ext.data.StoreManager.lookup('diseases').load();
         // Ext.data.StoreManager.lookup('Raion').load();
     },
     onSeriesTooltipRender: function () { },
     onDiseasesLoad: function (store, recs, success, operation) {
         console.log('onDiseasesLoad');
-        Ext.data.StoreManager.lookup('MainData').load();
+        // Ext.data.StoreManager.lookup('MainData').load();
     },
     onMainDataLoad: function (store, recs, success, operation) {
         console.log('onMainDataLoad');

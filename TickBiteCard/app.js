@@ -11,7 +11,18 @@ Ext.application({
     requires: [
         'TickBiteCard.view.main.Main',
         'TickBiteCard.*','Ext.draw.*', 
-        'Ext.plugin.Viewport'
+        'Ext.plugin.Viewport',
+        'TickBiteCard.model.Raion',
+        'TickBiteCard.model.Locality',
+        'TickBiteCard.model.diseases',
+        'TickBiteCard.model.mainData',
+        'TickBiteCard.model.Base',
+        'TickBiteCard.store.Raion',
+        'TickBiteCard.store.Locality',
+        'TickBiteCard.store.diseases',
+        'TickBiteCard.store.mainData'
+        // 'TickBiteCard.view.main.List1',
+        // 'TickBiteCard.view.main.List',
     ],
 
     // The name of the initial view to create. With the classic toolkit this class
