@@ -276,7 +276,7 @@ Ext.define('TickBiteCard.view.main.MainController', {
                 });
         });
         surface.renderFrame();
-        Ext.fly('spinner').fadeOut({ duration: 800, remove: true });
+        // Ext.fly('spinner').fadeOut({ duration: 800, remove: true });
     },
     initMainVindow: function () {
         console.log('initMainVindow');
@@ -284,13 +284,19 @@ Ext.define('TickBiteCard.view.main.MainController', {
     onAfterRender: function (comp, opts) {
         console.log('onAfterRender');
 
-        // Ext.data.StoreManager.lookup('diseases').load();
+        var MainD=  this.getViewModel().getStore('getDiseases');
+        if(MainD) MainD.load();
+        //Ext.data.StoreManager.lookup('diseases');
         // Ext.data.StoreManager.lookup('Raion').load();
+        var Raion=  this.getViewModel().getStore('getRaions');
+        if(Raion) Raion.load();
     },
     onSeriesTooltipRender: function () { },
     onDiseasesLoad: function (store, recs, success, operation) {
         console.log('onDiseasesLoad');
         // Ext.data.StoreManager.lookup('MainData').load();
+        var MainData=  this.getViewModel().getStore('getMainData');
+        if(MainData) MainData.load();
     },
     onMainDataLoad: function (store, recs, success, operation) {
         console.log('onMainDataLoad');
