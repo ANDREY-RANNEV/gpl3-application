@@ -78,7 +78,7 @@ Ext.define('TickBiteCard.view.main.MainModel', {
         },
         getMainData: {
             model: 'TickBiteCard.model.mainData',
-            autoLoad: false,
+            autoLoad: true,
             proxy: {
                 type: 'ajax',
                 url: 'resources/Data/mainData.json',

@@ -70,7 +70,8 @@
      */
     "requires": [
         "font-awesome",
-        "charts"
+        "charts",
+        "sencha-charts"
     ],
 
     /**
