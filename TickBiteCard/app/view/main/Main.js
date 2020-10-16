@@ -1,10 +1,25 @@
-/**
- * This class is the main view for the application. It is specified in app.js as the
- * "mainView" property. That setting automatically applies the "viewport"
- * plugin causing this view to become the body element (i.e., the viewport).
- *
- * TODO - Replace this content of this view to suite the needs of your application.
- */
+/*
+This file is part of Ext JS 6.0.0.640
+
+Copyright (c) 2011-2015 Sencha Inc
+
+Contact:  http://www.sencha.com/contact
+
+GNU General Public License Usage
+This file may be used under the terms of the GNU General Public License version 3.0 as
+published by the Free Software Foundation and appearing in the file LICENSE included in the
+packaging of this file.
+
+Please review the following information to ensure the GNU General Public License version 3.0
+requirements will be met: http://www.gnu.org/copyleft/gpl.html.
+
+If you are unsure which license is appropriate for your use, please contact the sales department
+at http://www.sencha.com/contact.
+
+Version: 6.0.0.640 Build date: 2015-06-28 12:48:37 (134671ed5b6bf074e014e83502b615cd2e26a515)
+
+*/
+
 Ext.define('TickBiteCard.view.main.Main', {
     extend: 'Ext.panel.Panel',
     xtype: 'app-main',
@@ -20,8 +35,8 @@ Ext.define('TickBiteCard.view.main.Main', {
         'Ext.data.*',
         'Ext.grid.*',
         'Ext.util.*',
-        
-        'Ext.plugin.Viewport' ,
+
+        'Ext.plugin.Viewport',
         'TickBiteCard.view.main.MainController',
         'TickBiteCard.view.main.MainModel'
     ],
@@ -33,18 +48,22 @@ Ext.define('TickBiteCard.view.main.Main', {
         bodyPadding: 5
     },
     scrollable: true,
-    layout:'border',
+    layout: 'border',
     border: true,
     width: '100%',
-    height:'100%',
+    height: '100%',
     items: [
-            {
+        {
             xtype: 'panel',
             width: 837.64001 * scaleFactor + 10,
             height: 921.37 * scaleFactor + 5,
-            region:'west',
+            region: 'west',
             border: true,
             items: [
+                {
+                    xtype: 'label',
+                    html: '<a href="https://github.com/ANDREY-RANNEV/gpl3-application.git" >GitHub</a>'
+                },
                 {
                     id: 'SamaraMapImg',
                     name: 'SamaraMapImg',
@@ -55,7 +74,7 @@ Ext.define('TickBiteCard.view.main.Main', {
                     engine: 'Ext.draw.engine.Svg',
                     border: false,
                     // plugins: {
-                        // spriteevents: true
+                    // spriteevents: true
                     // },
 
                     sprites: [
@@ -96,35 +115,39 @@ Ext.define('TickBiteCard.view.main.Main', {
             xtype: 'panel',
             width: 200,
             height: 200,
-            region:'center',
-            layout:'border',
+            region: 'center',
+            layout: 'border',
             border: true,
             items: [
                 {
                     xtype: 'panel',
-                    id:'titulPanel',
-                    name:'titulPanel',
+                    id: 'titulPanel',
+                    name: 'titulPanel',
                     width: 200,
                     height: 200,
-                    region:'north',
+                    region: 'north',
                     border: true,
                     items: [
-        
-                    ]},
-                    {
-                        id:'detailPanel',
-                        name:'detailPanel',
-                        xtype: 'panel',
-                        width: 200,
-                        height: 200,
-                        region:'center',
-                        border: true,
-                        items: [
-            
-                        ]}
-            ]}
-        ],
-        listeners: {
-    afterrender: 'onAfterRender'
-}
+
+                    ]
+                },
+                {
+                    id: 'detailPanel',
+                    name: 'detailPanel',
+                    xtype: 'panel',
+                    width: 200,
+                    height: 200,
+                    region: 'center',
+                    border: true,
+                    items: [
+
+                    ]
+                }
+            ]
+        }
+    ],
+
+    listeners: {
+        afterrender: 'onAfterRender'
+    }
 });
