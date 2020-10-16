@@ -1,1 +1,0 @@
-scaleFactor = 0.65;

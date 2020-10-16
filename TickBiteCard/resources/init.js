@@ -1,1 +1,1 @@
-scaleFactor = 0.65;
+var scaleFactor = 0.65;

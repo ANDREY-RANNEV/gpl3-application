@@ -37,4 +37,3 @@ Ext.application({
     // of merge conflicts when upgrading to new versions of Sencha Cmd.
     //-------------------------------------------------------------------------
 });
-var scaleFactor = 0.65;
