@@ -73,22 +73,9 @@ Ext.define('TickBiteCard.view.main.Main', {
                     height: 921.37 * scaleFactor,
                     engine: 'Ext.draw.engine.Svg',
                     border: false,
-                    // plugins: {
-                    // spriteevents: true
-                    // },
+                    plugins: ['spriteevents'],
 
-                    sprites: [
-                        {
-                            type: 'rect',
-                            x: 50,
-                            y: 50,
-                            width: 100,
-                            height: 100,
-                            lineWidth: 4,
-                            strokeStyle: 'green',
-                            fillStyle: 'yellow'
-                        }
-                    ],
+                    sprites: [],
 
                     listeners: {
                         spriteclick: 'onSpriteClick',

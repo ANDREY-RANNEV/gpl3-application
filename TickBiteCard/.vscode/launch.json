@@ -14,9 +14,19 @@
         {
             "type": "pwa-chrome",
             "request": "launch",
-            "name": "Launch Chrome against localhost",
-            "url": "http://localhost:8080",
+            "name": "Launch Chrome localhost:1841",
+            "url": "http://localhost:1841",
             "webRoot": "${workspaceFolder}"
         }
+        // ,
+        // {
+        //     "name": "Launch debug",
+        //     "type": "pwa-chrome",
+        //     "request": "launch",
+        //     // "preLaunchTask":"sencha_app_watch",
+        //     "url": "http://localhost:1841/",
+        //     "webRoot": "${workspaceFolder}"
+        // }
+
     ]
 }
