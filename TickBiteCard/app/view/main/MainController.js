@@ -35,7 +35,7 @@ Ext.define('TickBiteCard.view.main.MainController', {
         var sprite = item && item.sprite;
         if (sprite) {
 
-            //     if (!sprite.tooltip && sprite.type == 'path' && sprite.dataEmbeded && sprite.dataEmbeded.Id > 0 && sprite.dataEmbeded.Id < 30) {
+                if (!sprite.tooltip && sprite.type == 'path' && sprite.dataEmbeded && sprite.dataEmbeded.Id > 0 && sprite.dataEmbeded.Id < 30) {
 
             //         sprite.tooltip = new Ext.tip.ToolTip({
             //             target: sprite.element,
@@ -79,67 +79,67 @@ Ext.define('TickBiteCard.view.main.MainController', {
 
             this.oldFillingValue = sprite.fillStyle;
             var dataEmbeded = sprite && sprite.dataEmbeded;
-            if (dataEmbeded && dataEmbeded.Id > 0 && dataEmbeded.Id < 30) {
+            // if (dataEmbeded && dataEmbeded.Id > 0 && dataEmbeded.Id < 30) {
 
-                var html_p = '<b>' + sprite.title + '</b></br>';
+            //     var html_p = '<b>' + sprite.title + '</b></br>';
 
-                var Diseases = Ext.data.StoreManager.lookup('Diseases');
+            //     var Diseases = Ext.data.StoreManager.lookup('Diseases');
 
-                var MainData = Ext.data.StoreManager.lookup('MainData');
+            //     var MainData = Ext.data.StoreManager.lookup('MainData');
 
-                MainData.clearFilter(true);
-                MainData.filter('raion_id', new RegExp("^" + dataEmbeded.Id + "$"));
-                MainData.group('raion_id');
-                var rowh = [];
-                var colh = [];
-                MainData.each(function (record) {
-                    // var disease = Diseases.getAt(Diseases.findExact('id', record.data.disease_id));
-                    // html_p += disease.data.name + '</br>'
-                    if (rowh.indexOf(record.data.disease_id) == -1) rowh.push(record.data.disease_id)
-                    if (colh.indexOf(record.data.year) == -1) colh.push(record.data.year)
-                });
+            //     MainData.clearFilter(true);
+            //     MainData.filter('raion_id', new RegExp("^" + dataEmbeded.Id + "$"));
+            //     MainData.group('raion_id');
+            //     var rowh = [];
+            //     var colh = [];
+            //     MainData.each(function (record) {
+            //         // var disease = Diseases.getAt(Diseases.findExact('id', record.data.disease_id));
+            //         // html_p += disease.data.name + '</br>'
+            //         if (rowh.indexOf(record.data.disease_id) == -1) rowh.push(record.data.disease_id)
+            //         if (colh.indexOf(record.data.year) == -1) colh.push(record.data.year)
+            //     });
 
-                html_p += '<table border="1" cellspacing="0">';
-                html_p += "<tr>";
-                html_p += '<td style="width: 300px">';
-                html_p += "</td>";
-                colh.forEach(function (year) {
-                    html_p += '<td style="width: 20px">' + year + "</td>";
-                });
-                html_p += "</tr>";
-                rowh.forEach(function (disease_id) {
-                    html_p += "<tr>";
-                    var disease = Diseases.getAt(Diseases.findExact('id', disease_id));
-                    html_p += '<td>' + disease.data.name + '</td>'
-                    colh.forEach(function (year) {
-                        var val=0;
-                        MainData.queryBy(function(record,id){
-                            return (record.get('disease_id') == disease_id && 
-                                    record.get('year') == year &&
-                                    record.get('raion_id') ==  dataEmbeded.Id
-                                );
-                        }).items.forEach(function (item) {val+=item.data.count;});
-                        html_p += '<td  align="center">' + (val==0?'':new String(val)) + '</td>'
-                    });
-                    html_p += "</tr>";
-                });
-                html_p += "<table>";
+            //     html_p += '<table border="1" cellspacing="0">';
+            //     html_p += "<tr>";
+            //     html_p += '<td style="width: 300px">';
+            //     html_p += "</td>";
+            //     colh.forEach(function (year) {
+            //         html_p += '<td style="width: 20px">' + year + "</td>";
+            //     });
+            //     html_p += "</tr>";
+            //     rowh.forEach(function (disease_id) {
+            //         html_p += "<tr>";
+            //         var disease = Diseases.getAt(Diseases.findExact('id', disease_id));
+            //         html_p += '<td>' + disease.data.name + '</td>'
+            //         colh.forEach(function (year) {
+            //             var val=0;
+            //             MainData.queryBy(function(record,id){
+            //                 return (record.get('disease_id') == disease_id && 
+            //                         record.get('year') == year &&
+            //                         record.get('raion_id') ==  dataEmbeded.Id
+            //                     );
+            //             }).items.forEach(function (item) {val+=item.data.count;});
+            //             html_p += '<td  align="center">' + (val==0?'':new String(val)) + '</td>'
+            //         });
+            //         html_p += "</tr>";
+            //     });
+            //     html_p += "<table>";
 
-                var pan = Ext.getCmp('titulPanel');
-                Ext.toast({ html: html_p,
-                title: 'My Title',
-                //width: 200,
-                align: 't',
-                hideDuration: 200,
-                autoCloseDelay: 5000,});
-                // pan.body.update(html_p);
-                if (sprite.type == 'path') {
-                    sprite.setAttributes({
-                        // strokeStyle: '#FF0000',
-                        // lineWidth: 3,
-                        fillStyle: '#FFFF33'
-                    });
-                }
+            //     var pan = Ext.getCmp('titulPanel');
+            //     Ext.toast({ html: html_p,
+            //     title: 'My Title',
+            //     //width: 200,
+            //     align: 't',
+            //     hideDuration: 200,
+            //     autoCloseDelay: 5000,});
+            //     // pan.body.update(html_p);
+            //     if (sprite.type == 'path') {
+            //         sprite.setAttributes({
+            //             // strokeStyle: '#FF0000',
+            //             // lineWidth: 3,
+            //             fillStyle: '#FFFF33'
+            //         });
+                // }
                 // else {
                 //     var fSprite =  sprite.getParent();//.getSprites();//sprite.dataEmbeded.name);
                 //     var del=Ext.get(sprite.dataEmbeded.name);

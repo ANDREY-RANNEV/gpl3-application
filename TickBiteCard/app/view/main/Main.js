@@ -60,10 +60,7 @@ Ext.define('TickBiteCard.view.main.Main', {
             region: 'west',
             border: true,
             items: [
-                {
-                    xtype: 'label',
-                    html: '<a href="https://github.com/ANDREY-RANNEV/gpl3-application.git" >GitHub</a>'
-                },
+
                 {
                     id: 'SamaraMapImg',
                     name: 'SamaraMapImg',
@@ -88,14 +85,14 @@ Ext.define('TickBiteCard.view.main.Main', {
                         //     this.callParent();
 
                         //     console.log('start on render');
-                        // },
-                        // 'afterrender': 'onAfterRenderMap'
-                        // function (me) {
-                        //     var surface = me.getSurface(),
-                        //         sprite = surface.getItems()[0];
                         // }
                     }
+                },
+                {
+                    xtype: 'label',
+                    html: '<img width="12" height="12" src="resources/Imgages/iconfinder_GitHub_Social-Network-Communicate-Page-Curl-Effect-Circle-Glossy-Shadow-Shine_437918.png"/><a href="https://github.com/ANDREY-RANNEV/gpl3-application.git" target="_blank">(GGPL 3.0) GitHub Source</a>'
                 }
+
             ]
         },
         {
@@ -106,6 +103,7 @@ Ext.define('TickBiteCard.view.main.Main', {
             layout: 'border',
             border: true,
             items: [
+                
                 {
                     xtype: 'panel',
                     id: 'titulPanel',
@@ -115,7 +113,7 @@ Ext.define('TickBiteCard.view.main.Main', {
                     region: 'north',
                     border: true,
                     items: [
-
+                        
                     ]
                 },
                 {
