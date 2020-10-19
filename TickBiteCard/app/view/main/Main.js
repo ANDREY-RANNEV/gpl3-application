@@ -90,7 +90,7 @@ Ext.define('TickBiteCard.view.main.Main', {
                 },
                 {
                     xtype: 'label',
-                    html: '<img width="12" height="12" src="resources/Imgages/iconfinder_GitHub_Social-Network-Communicate-Page-Curl-Effect-Circle-Glossy-Shadow-Shine_437918.png"/><a href="https://github.com/ANDREY-RANNEV/gpl3-application.git" target="_blank">(GGPL 3.0) GitHub Source</a>'
+                    html: '<img width="16" height="16" src="resources/Imgages/iconfinder_GitHub_Social-Network-Communicate-Page-Curl-Effect-Circle-Glossy-Shadow-Shine_437918.png"/><a href="https://github.com/ANDREY-RANNEV/gpl3-application.git" target="_blank">(GGPL 3.0) GitHub Source</a>'
                 }
 
             ]
